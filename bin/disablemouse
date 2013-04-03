@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+#Needed a better way to disable the built-in touchpad and pointer on a laptop
+#Sometimes the Device ID would change depending on what was plugged in to the USB system on boot
+
+devicelist = `xinput`
+devicelist.force_encoding("UTF-8").scan(/DualPoint.*id=(\d*)/){|i| `xinput set-prop #{i.first} "Device Enabled" 0` }
