@@ -31,9 +31,11 @@ export EDITOR="nano"
 ##### RVM Settings #####
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-#Prompt for RVM and Git
-[[ -s "$rvm_path/contrib/ps1_functions" ]] &&
-        source "$rvm_path/contrib/ps1_functions"
+##### Python Virtualenvwrapper ######
+[[ -s "/usr/local/share/python/virtualenvwrapper.sh" ]] && source "/usr/local/share/python/virtualenvwrapper.sh"
+
+##### Prompt ######
+[[ -s "$HOME/.bash.d/ps1_functions" ]] && source "$HOME/.bash.d/ps1_functions"
 
 ps1_set --notime
 
