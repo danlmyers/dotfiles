@@ -80,6 +80,21 @@ ps1_rvm()
   command -v rvm-prompt >/dev/null 2>&1 && printf "%s" " $(rvm-prompt) "
 }
 
+ps1_virtualenv()
+{
+	RED='\[\033[31m\]'
+
+	# Get Virtual Env
+	if [[ $VIRTUAL_ENV != "" ]]
+    	then
+      	# Strip out the path and just leave the env name
+      	printf " ${RED}(${VIRTUAL_ENV##*/})\[\033[0m\] "
+	else
+      	# In case you don't have one activated
+      	printf ""
+	fi
+}
+
 ps1_update()
 {
   local prompt_char='$' separator="\n" notime=0
@@ -115,9 +130,9 @@ ps1_update()
   done
 
   if (( notime > 0 )) ; then
-    PS1="$(ps1_titlebar)$(ps1_identity)$(ps1_git)$(ps1_rvm)${separator}${prompt_char} "
+    PS1="$(ps1_titlebar)$(ps1_identity)$(ps1_git)$(ps1_virtualenv)$(ps1_rvm)${separator}${prompt_char} "
   else
-    PS1="$(ps1_titlebar)\D{%H:%M:%S} $(ps1_identity)$(ps1_git)$(ps1_rvm)${separator}${prompt_char} "
+    PS1="$(ps1_titlebar)\D{%H:%M:%S} $(ps1_identity)$(ps1_git)$(ps1_virtualenv)$(ps1_rvm)${separator}${prompt_char} "
   fi
 }
 
