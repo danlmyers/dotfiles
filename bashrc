@@ -25,6 +25,8 @@ conditionally_prefix_path ~/.pbin
 ##### Shell Settings #####
 export EDITOR="nano"
 
+##### Private Bashrc ######
+[[ -s "$HOME/.pbashrc" ]] && source "$HOME/.pbashrc"
 
 ##### RVM Settings #####
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
