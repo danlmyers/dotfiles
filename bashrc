@@ -23,7 +23,7 @@ conditionally_prefix_path ~/.pbin
 
 
 ##### Shell Settings #####
-export EDITOR="nano"
+export EDITOR="vim"
 
 ##### Private Bashrc ######
 [[ -s "$HOME/.pbashrc" ]] && source "$HOME/.pbashrc"
