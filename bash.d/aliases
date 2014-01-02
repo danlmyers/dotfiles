@@ -3,17 +3,23 @@
 #Created by Daniel Myers
 ########################################
 
-#####Gui apps from cli#####
+##### Gui apps from cli #####
 alias gedit='gedit.sh'
 alias giggle='giggle &'
 alias zim='zim &'
 alias emacs='emacs &'
 
-#####Miscellaneous#####
+##### Miscellaneous #####
 alias grep='GREP_COLOR="1;37;41" grep --color=auto'
-alias ls='ls -G'
 
-#####GIT#####
+##### OS Specific #####
+if [ "$(uname)" == "Darwin" ]; then
+    alias ls='ls -G'
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    alias ls='ls -G --color'
+fi
+
+##### GIT #####
 alias g='git'
 alias gb="git branch -a -v"
 alias gc="git commit -v"
