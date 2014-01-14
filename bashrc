@@ -31,8 +31,9 @@ export EDITOR="vim"
 ##### RVM Settings #####
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-##### Python Virtualenvwrapper (this is homebrew specific location) ######
+##### Python Virtualenvwrapper ######
 [[ -s "/usr/local/share/python/virtualenvwrapper.sh" ]] && source "/usr/local/share/python/virtualenvwrapper.sh"
+[[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
 
 ##### SSH Agent #####
 eval $(ssh-agent)
