@@ -29,10 +29,13 @@ export EDITOR="vim"
 [[ -s "$HOME/.pbashrc" ]] && source "$HOME/.pbashrc"
 
 ##### RVM Settings #####
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 ##### Python Virtualenvwrapper (this is homebrew specific location) ######
 [[ -s "/usr/local/share/python/virtualenvwrapper.sh" ]] && source "/usr/local/share/python/virtualenvwrapper.sh"
+
+##### SSH Agent #####
+eval $(ssh-agent)
 
 ##### Prompt ######
 [[ -s "$HOME/.bash.d/ps1_functions" ]] && source "$HOME/.bash.d/ps1_functions"
