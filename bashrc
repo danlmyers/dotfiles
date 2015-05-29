@@ -10,6 +10,9 @@
 ##### Aliases #####
 [[ -s "$HOME/.bash.d/aliases" ]] && source "$HOME/.bash.d/aliases"
 
+##### Git Tab Completion #####
+[[ -s "$HOME/.bash.d/git-completion.bash" ]] && source "$HOME/.bash.d/git-completion.bash"
+
 ##### Ruby Path #####
 if hash ruby 2>/dev/null; then
     PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
