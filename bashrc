@@ -10,6 +10,12 @@
 ##### Aliases #####
 [[ -s "$HOME/.bash.d/aliases" ]] && source "$HOME/.bash.d/aliases"
 
+##### Ruby Path #####
+if hash ruby 2>/dev/null; then
+    PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+fi
+
+
 ##### PATHs #####
 function conditionally_prefix_path {
     local dir=$1
@@ -28,9 +34,6 @@ export EDITOR="vim"
 ##### Private Bashrc ######
 [[ -s "$HOME/.pbashrc" ]] && source "$HOME/.pbashrc"
 
-##### RVM Settings #####
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 ##### Python Virtualenvwrapper ######
 [[ -s "/usr/local/share/python/virtualenvwrapper.sh" ]] && source "/usr/local/share/python/virtualenvwrapper.sh"
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
@@ -38,5 +41,5 @@ export EDITOR="vim"
 ##### Prompt ######
 [[ -s "$HOME/.bash.d/ps1_functions" ]] && source "$HOME/.bash.d/ps1_functions"
 
-ps1_set --notime
+ps1_set
 
