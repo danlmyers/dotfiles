@@ -10,6 +10,9 @@
 ##### Aliases #####
 [[ -s "$HOME/.bash.d/aliases" ]] && source "$HOME/.bash.d/aliases"
 
+##### Functions #####
+[[ -s "$HOME/.bash.d/functions" ]] && source "$HOME/.bash.d/functions"
+
 ##### Git Tab Completion #####
 [[ -s "$HOME/.bash.d/git-completion.bash" ]] && source "$HOME/.bash.d/git-completion.bash"
 
@@ -27,9 +30,19 @@ function conditionally_prefix_path {
     fi
 }
 
+function conditionally_append_path {
+   local dir=$1
+   if [ -d $dir ]; then
+      PATH="${PATH}:$dir"
+   fi
+}
+
 conditionally_prefix_path ~/.bin
 conditionally_prefix_path ~/.pbin
 
+##### GO #####
+[[ -s "$HOME/.go" ]] && export GOPATH="$HOME/.go"
+conditionally_append_path ~/.go/bin
 
 ##### Shell Settings #####
 export EDITOR="vim"

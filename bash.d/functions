@@ -1,0 +1,11 @@
+########################################
+# DotFiles Bash_Functions
+# Created by Daniel Myers
+########################################
+pwg(){
+	pwgen -s $@ 1
+}
+
+pwgs(){
+	pwgen -s -y $@ 1
+}

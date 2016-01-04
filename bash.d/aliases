@@ -35,3 +35,6 @@ alias gitk='gitk &'
 ##### Vagrant #####
 alias vssh="vagrant ssh"
 alias vup="vagrant up"
+
+##### Docker/Docker-compose #####
+alias dc="docker-compose"
