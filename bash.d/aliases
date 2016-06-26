@@ -16,7 +16,7 @@ alias grep='GREP_COLOR="1;37;41" grep --color=auto'
 if [ "$(uname)" == "Darwin" ]; then
     alias ls='ls -G'
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    alias ls='ls -G --color'
+    alias ls='ls --color'
 fi
 
 ##### GIT #####
