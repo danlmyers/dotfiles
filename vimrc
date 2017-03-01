@@ -20,7 +20,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'virtualenv.vim'
 
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 
 " " Add all your plugins here (note older versions of Vundle used Bundle
 " instead of Plugin)
@@ -73,7 +73,7 @@ endif
 call togglebg#map("<F5>")
 
 " Vim Statusline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+" python3 from powerline.vim import setup as powerline_setup
+" python3 powerline_setup()
+" python3 del powerline_setup
 set laststatus=2
