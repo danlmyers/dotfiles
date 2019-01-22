@@ -19,6 +19,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'virtualenv.vim'
+Plugin 'chase/vim-ansible-yaml'
+Plugin 'philips/vim-ledger'
 
 " Bundle 'Valloric/YouCompleteMe'
 
