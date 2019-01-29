@@ -88,4 +88,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+" deal with trailing whitespace
 set list listchars=tab:»·,trail:·
+:nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
