@@ -32,6 +32,8 @@ Plugin 'philips/vim-ledger'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" Nerdtree toggle
+map <C-n> :NERDTreeToggle<CR>
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -79,3 +81,9 @@ call togglebg#map("<F5>")
 " python3 powerline_setup()
 " python3 del powerline_setup
 set laststatus=2
+
+" General Settings
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
