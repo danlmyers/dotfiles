@@ -11,6 +11,7 @@ alias emacs='emacs &'
 
 ##### Miscellaneous #####
 alias grep='GREP_COLOR="1;37;41" grep --color=auto'
+alias week='date +%V'
 
 ##### OS Specific #####
 if [ "$(uname)" == "Darwin" ]; then
@@ -29,7 +30,7 @@ alias gl="git pull"
 alias glr="git pull --rebase"
 alias gp="git push"
 alias gs="git status -sb"
-alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %aE' --abbrev-commit --date=relative"
 alias gitk='gitk &'
 
 ##### Vagrant #####
@@ -38,3 +39,5 @@ alias vup="vagrant up"
 
 ##### Docker/Docker-compose #####
 alias dc="docker-compose"
+alias dockerrai="docker ps -a | awk '{print $NF}' | grep -v 'NAMES' | xargs docker rm"
+

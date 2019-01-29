@@ -56,12 +56,9 @@ export EDITOR="vim"
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
 [[ -s "/usr/bin/virtualenvwrapper.sh" ]] && source "/usr/bin/virtualenvwrapper.sh"
 
-##### Prompt ######
-#[[ -s "$HOME/.bash.d/ps1_functions" ]] && source "$HOME/.bash.d/ps1_functions"
-
-#ps1_set
+##### Powerline #####
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-. /usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
-#. /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+[[ -s /usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh ]] && source "/usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh"
+[[ -s /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]] && source "/usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh"
