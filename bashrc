@@ -62,3 +62,5 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 [[ -s /usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh ]] && source "/usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh"
 [[ -s /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]] && source "/usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh"
+
+complete -C /usr/local/bin/vault vault

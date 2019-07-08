@@ -34,6 +34,11 @@ filetype plugin indent on    " required
 
 " Nerdtree toggle
 map <C-n> :NERDTreeToggle<CR>
+
+" Nerdtree automatically
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 "split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>

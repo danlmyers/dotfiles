@@ -40,4 +40,6 @@ alias vup="vagrant up"
 ##### Docker/Docker-compose #####
 alias dc="docker-compose"
 alias dockerrai="docker ps -a | awk '{print $NF}' | grep -v 'NAMES' | xargs docker rm"
-
+alias docker-rmi="docker rmi -f $(docker images -a -q | sort | uniq)"
+alias docker-stop="docker stop $(docker ps -a -q)"
+alias docker-rm="docker rm $(docker ps -a -q)"
