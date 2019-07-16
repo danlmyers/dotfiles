@@ -52,6 +52,7 @@ export EDITOR="vim"
 [[ -s "$HOME/.pbashrc" ]] && source "$HOME/.pbashrc"
 
 ##### Python Virtualenvwrapper ######
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 [[ -s "/usr/local/share/python/virtualenvwrapper.sh" ]] && source "/usr/local/share/python/virtualenvwrapper.sh"
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
 [[ -s "/usr/bin/virtualenvwrapper.sh" ]] && source "/usr/bin/virtualenvwrapper.sh"
@@ -60,6 +61,7 @@ export EDITOR="vim"
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
+[[ -s /usr/local/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh ]] && source "/usr/local/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh"
 [[ -s /usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh ]] && source "/usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh"
 [[ -s /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]] && source "/usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh"
 
